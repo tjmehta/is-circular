@@ -1,0 +1,40 @@
+{
+  "name": "is-circular",
+  "version": "1.0.0",
+  "description": "checks an object (function or array) for circular references",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "code": "^1.5.0",
+    "lab": "^6.2.0",
+    "standard": "^5.4.1"
+  },
+  "scripts": {
+    "test": "lab -a code -t 100",
+    "test-watch": "nodemon -x npm test",
+    "lint": "standard",
+    "format": "standard --format"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tjmehta/is-circular.git"
+  },
+  "keywords": [
+    "is",
+    "circular",
+    "cyclic",
+    "object",
+    "ref",
+    "references",
+    "array",
+    "json"
+  ],
+  "author": "Tejesh Mehta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tjmehta/is-circular/issues"
+  },
+  "homepage": "https://github.com/tjmehta/is-circular"
+}
