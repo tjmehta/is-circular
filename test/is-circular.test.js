@@ -22,9 +22,34 @@ describe('is-circular', function () {
     done()
   })
 
+  it('should return true for circular objects', function (done) {
+    var x = {}
+    x.cyclic = { a: {}, x: x }
+    expect(isCircular(x)).to.equal(true)
+
+    done()
+  })
+
+  it('should return true for circular objects', function (done) {
+    var x = {}
+    x.cyclic = { a: {}, indirect: { x: x } }
+    expect(isCircular(x)).to.equal(true)
+
+    done()
+  })
+
   it('should return false for non-circular objects', function (done) {
     var x = {}
     x.cyclic = { a: 1, b: 2 }
+    expect(isCircular(x)).to.equal(false)
+
+    done()
+  })
+
+  it('should return false for non-circular objects', function (done) {
+    var x = {}
+    var y = {}
+    x.cyclic = { a: y, b: y }
     expect(isCircular(x)).to.equal(false)
 
     done()
