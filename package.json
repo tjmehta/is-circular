@@ -1,6 +1,6 @@
 {
   "name": "is-circular",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "checks an object (function or array) for circular references",
   "main": "index.js",
   "directories": {
