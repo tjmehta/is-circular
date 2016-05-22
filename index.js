@@ -18,24 +18,24 @@ function CircularChecker (obj) {
 }
 /**
  * checks whether this.obj is circular
- * @param  {object}  _obj do not pass. this param is used for recursive calls. defaults to this.obj
- * @param  {array}   a list of descendants from the root object to _obj
+ * @param  {object}  obj do not pass. this param is used for recursive calls. defaults to this.obj
+ * @param  {array}   seen a list of descendants from the root object to obj
  * @return {Boolean} true if obj is circular, false if it is not
  */
-CircularChecker.prototype.isCircular = function (_obj, seen) {
-  _obj = _obj || this.obj
+CircularChecker.prototype.isCircular = function (obj, seen) {
+  obj = obj || this.obj
   seen = seen || []
-  if (!(_obj instanceof Object)) {
+  if (!(obj instanceof Object)) {
     throw new TypeError('"obj" must be an object (or inherit from it)')
   }
   var self = this
-  seen.push(_obj)
+  seen.push(obj)
 
-  for (var key in _obj) {
-    var val = _obj[key]
+  for (var key in obj) {
+    var val = obj[key]
     if (val instanceof Object) {
-      if (~seen.indexOf(val) || self.isCircular(val, seen.slice()) ){
-        return true;
+      if (~seen.indexOf(val) || self.isCircular(val, seen.slice())) {
+        return true
       }
     }
   }
