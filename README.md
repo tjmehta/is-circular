@@ -1,4 +1,4 @@
-# is-circular [![Build Status](https://travis-ci.org/tjmehta/is-circular.svg)](https://travis-ci.org/tjmehta/is-circular) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
+# is-circular [![Build Status](https://travis-ci.org/tjmehta/is-circular.svg?branch=master)](https://travis-ci.org/tjmehta/is-circular) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
 Determines if an object (or array) is circular
 
