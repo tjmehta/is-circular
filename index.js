@@ -24,17 +24,17 @@ function CircularChecker (obj) {
  */
 CircularChecker.prototype.isCircular = function (obj, seen) {
   obj = obj || this.obj
-  seen = seen || []
+  seen = seen || new Set()
   if (!(obj instanceof Object)) {
     throw new TypeError('"obj" must be an object (or inherit from it)')
   }
   var self = this
-  seen.push(obj)
+  seen.add(obj)
 
   for (var key in obj) {
     var val = obj[key]
     if (val instanceof Object) {
-      if (~seen.indexOf(val) || self.isCircular(val, seen.slice())) {
+      if (seen.has(obj) || self.isCircular(val, new Set(seen))) {
         return true
       }
     }
