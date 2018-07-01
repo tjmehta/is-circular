@@ -9,7 +9,7 @@
   "devDependencies": {
     "code": "^1.5.0",
     "lab": "^6.2.0",
-    "standard": "^5.4.1"
+    "standard": "^11.0.1"
   },
   "scripts": {
     "test": "lab -a code -t 100",
