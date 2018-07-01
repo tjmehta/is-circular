@@ -8,14 +8,17 @@
   },
   "devDependencies": {
     "code": "^1.5.0",
+    "is-circular": "1.0.1",
     "lab": "^6.2.0",
-    "standard": "^5.4.1"
+    "matcha": "^0.7.0",
+    "standard": "^11.0.1"
   },
   "scripts": {
-    "test": "lab -a code -t 100",
+    "benchmark": "matcha benchmark/*",
+    "test": "lab -a code -t 100 -l",
     "test-watch": "nodemon -x npm test",
     "lint": "standard",
-    "format": "standard --format"
+    "format": "standard --fix"
   },
   "repository": {
     "type": "git",
