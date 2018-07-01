@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "code": "^1.5.0",
+    "eslint": "^5.0.1",
     "lab": "^6.2.0",
     "standard": "^11.0.1"
   },
