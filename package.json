@@ -1,6 +1,6 @@
 {
   "name": "is-circular",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "high-performance, zero-dependency circular reference check for objects (or arrays)",
   "main": "index.js",
   "directories": {
