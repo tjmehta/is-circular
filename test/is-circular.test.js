@@ -1,23 +1,17 @@
-var Code = require('code')
-var Lab = require('lab')
+/* eslint-env jest */
 
 var isCircular = require('../')
 
-var lab = exports.lab = Lab.script()
-var describe = lab.describe
-var it = lab.it
-var expect = Code.expect
-
 describe('is-circular', function () {
   it('should error if passed a non-object', function (done) {
-    expect(isCircular.bind(null, 2)).to.throw(/object/)
+    expect(isCircular.bind(null, 2)).toThrow(/object/)
     done()
   })
 
   it('should return true for circular objects', function (done) {
     var x = {}
     x.cyclic = { a: 1, x: x }
-    expect(isCircular(x)).to.equal(true)
+    expect(isCircular(x)).toEqual(true)
 
     done()
   })
@@ -25,7 +19,7 @@ describe('is-circular', function () {
   it('should return true for circular objects', function (done) {
     var x = {}
     x.cyclic = { a: {}, x: x }
-    expect(isCircular(x)).to.equal(true)
+    expect(isCircular(x)).toEqual(true)
 
     done()
   })
@@ -33,7 +27,7 @@ describe('is-circular', function () {
   it('should return true for circular objects', function (done) {
     var x = {}
     x.cyclic = { a: {}, indirect: { x: x } }
-    expect(isCircular(x)).to.equal(true)
+    expect(isCircular(x)).toEqual(true)
 
     done()
   })
@@ -41,7 +35,7 @@ describe('is-circular', function () {
   it('should return false for non-circular objects', function (done) {
     var x = {}
     x.cyclic = { a: 1, b: 2 }
-    expect(isCircular(x)).to.equal(false)
+    expect(isCircular(x)).toEqual(false)
 
     done()
   })
@@ -50,7 +44,7 @@ describe('is-circular', function () {
     var x = {}
     var y = {}
     x.cyclic = { a: y, b: y }
-    expect(isCircular(x)).to.equal(false)
+    expect(isCircular(x)).toEqual(false)
 
     done()
   })

@@ -1,21 +1,20 @@
 {
   "name": "is-circular",
   "version": "1.0.1",
-  "description": "checks an object (function or array) for circular references",
+  "description": "high-performance, zero-dependency circular reference check for objects (or arrays)",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "devDependencies": {
-    "code": "^1.5.0",
     "is-circular": "1.0.1",
-    "lab": "^6.2.0",
+    "jest": "^23.2.0",
     "matcha": "^0.7.0",
     "standard": "^11.0.1"
   },
   "scripts": {
     "benchmark": "matcha benchmark/*",
-    "test": "lab -a code -t 100 -l",
+    "test": "jest --coverage",
     "test-watch": "nodemon -x npm test",
     "lint": "standard",
     "format": "standard --fix"
