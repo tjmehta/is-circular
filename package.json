@@ -10,7 +10,7 @@
     "is-circular": "github:tjmehta/is-circular#v1.0.1",
     "jest": "^23.2.0",
     "matcha": "^0.7.0",
-    "standard": "^11.0.1"
+    "standard": "^13.0.1"
   },
   "scripts": {
     "benchmark": "matcha benchmark/*",
